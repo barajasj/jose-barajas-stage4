@@ -1,0 +1,13 @@
+{
+  "status": "NOT_READY",
+  "guardrail": "agent3-output-validation",
+  "action": "WORKFLOW_FAILURE",
+  "reason": "The requirement analysis is not ready for implementation.",
+  "remainingIssues": [
+    "Persisted field schema is not specified: field name, data type, and whether the value is stored as an enum, string, or ID are unknown.",
+    "It is unclear how the application detects whether the user has intentionally cleared the field or whether this is a fresh unit with no prior selection.",
+    "Required validation timing and error message are not defined (on save, on change, on blur, or specific text).",
+    "Transition behavior when loading an existing unit that has a saved Condenser Type but no longer meets the visibility criteria is not explicitly stated.",
+    "The triggering event or lifecycle point for applying the default value when the visibility condition changes is not specified."
+  ]
+}

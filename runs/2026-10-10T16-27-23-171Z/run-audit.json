@@ -1,0 +1,37 @@
+{
+  "workflowOutcome": "WORKFLOW_FAILURE",
+  "model": "SWE-1.7",
+  "totalEstimatedCostUsd": 0.025323,
+  "steps": [
+    {
+      "step": "Agent1",
+      "agent": "Requirement Interpreter",
+      "model": "SWE-1.7",
+      "status": "PASS",
+      "inputTokens": 326,
+      "outputTokens": 834,
+      "estimatedCostUsd": 0.013488,
+      "timestamp": "2026-10-10T16:27:29.915Z"
+    },
+    {
+      "step": "Agent2",
+      "agent": "Ambiguity Risk Analyzer",
+      "model": "SWE-1.7",
+      "status": "PASS",
+      "inputTokens": 834,
+      "outputTokens": 117,
+      "estimatedCostUsd": 0.004257,
+      "timestamp": "2026-10-10T16:28:18.607Z"
+    },
+    {
+      "step": "Agent3",
+      "agent": "Implementation Readiness Reviewer",
+      "model": "SWE-1.7",
+      "status": "PASS",
+      "inputTokens": 966,
+      "outputTokens": 312,
+      "estimatedCostUsd": 0.007578,
+      "timestamp": "2026-10-10T16:28:38.028Z"
+    }
+  ]
+}

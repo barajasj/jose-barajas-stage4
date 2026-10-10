@@ -1,0 +1,10 @@
+{
+  "status": "READY",
+  "readinessChecks": {
+    "requirementsActionable": true,
+    "expectedBehaviorDefined": true,
+    "noBlockingIssues": true
+  },
+  "remainingIssues": [],
+  "rationale": "The user-visible behavior is fully specified: field labels, dropdown values, visibility condition, required state, default value, and lifecycle on show/hide/re-show. The listed ambiguities are domain background, data-model details, or technical implementation choices that can be resolved using existing project conventions and normal engineering judgment."
+}

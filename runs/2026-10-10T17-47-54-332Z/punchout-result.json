@@ -1,0 +1,7 @@
+{
+  "status": "BLOCKED",
+  "guardrail": "punchout-enforcement",
+  "action": "HUMAN_REVIEW_REQUIRED",
+  "reason": "Workflow continuation blocked because Agent 2 requires human review.",
+  "nextAgentAllowed": false
+}

@@ -1,0 +1,5 @@
+{
+  "status": "FAIL",
+  "guardrail": "agent2-output-validation",
+  "reason": "Agent 2 output is not valid JSON."
+}

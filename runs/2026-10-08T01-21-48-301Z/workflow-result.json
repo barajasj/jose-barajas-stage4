@@ -1,0 +1,5 @@
+{
+  "outcome": "WORKFLOW_SUCCESS",
+  "reason": "All agents and guardrails completed successfully.",
+  "agent3Executed": true
+}

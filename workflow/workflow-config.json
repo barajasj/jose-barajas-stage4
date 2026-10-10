@@ -1,0 +1,32 @@
+{
+  "workflow": {
+    "name": "HVAC Ticket Analysis Workflow",
+    "version": "1.0.0"
+  },
+  "runtime": {
+    "model": "SWE-1.7"
+  },
+  "agents": {
+    "agent1": {
+      "name": "Requirement Interpreter",
+      "prompt": "agents/agent1-requirement-interpreter.md",
+      "guardrail": "guardrails/validate-agent1-output.js"
+    },
+    "agent2": {
+      "name": "Ambiguity Risk Analyzer",
+      "prompt": "agents/agent2-ambiguity-risk-analyzer.md",
+      "guardrail": "guardrails/validate-agent2-output.js",
+      "punchoutGuardrail": "guardrails/enforce-punchout.js"
+    },
+    "agent3": {
+      "name": "Implementation Readiness Reviewer",
+      "prompt": "agents/agent3-implementation-readiness.md",
+      "guardrail": "guardrails/validate-agent3-output.js"
+    }
+  },
+  "outcomes": {
+    "success": "WORKFLOW_SUCCESS",
+    "failure": "WORKFLOW_FAILURE",
+    "punchout": "HUMAN_REVIEW_REQUIRED"
+  }
+}

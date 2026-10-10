@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "blockingAmbiguities": [],
+  "rationale": "Visibility, default/reset-on-show, clear-on-hide, required persistence, and allowed values are specified. The listed ambiguities concern schema details, validation UX, downstream effect specifics, and legacy-load transition timing that are either implementation details or covered by the unconditional 'otherwise hide it and clear any saved value' rule, so no human decision is needed to proceed."
+}

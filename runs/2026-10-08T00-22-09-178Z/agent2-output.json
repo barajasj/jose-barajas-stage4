@@ -1,0 +1,33 @@
+```json
+{
+  "status": "PUNCH_OUT",
+  "blockingAmbiguities": [
+    {
+      "description": "The valid condenser type values are not specified.",
+      "reason": "A selection field cannot be implemented without a defined list of allowed options and a default or null handling rule.",
+      "clarificationNeeded": "What are the valid condenser type enum values, and which value should be the default or null?"
+    },
+    {
+      "description": "The activation condition is contradictory: the title says 'air-cooled DX' but the acceptance criteria say only 'DX cooling coil'.",
+      "reason": "This produces materially different implementations: the field would be available for all DX systems or only for air-cooled DX systems.",
+      "clarificationNeeded": "Should the condenser type field be available for all DX cooling systems, or only for air-cooled DX cooling systems?"
+    },
+    {
+      "description": "The expected behavior for non-qualifying systems is vague.",
+      "reason": "Hiding, disabling, or clearing the field have different UI, validation, and persistence implications.",
+      "clarificationNeeded": "When the system is not air-cooled DX, should the condenser type field be hidden, disabled, or cleared, and should any previously saved value be reset?"
+    },
+    {
+      "description": "The data model and persistence rules are undefined.",
+      "reason": "The database or API schema needs to know whether the field is nullable, whether it has a default, and whether it is only conditionally persisted.",
+      "clarificationNeeded": "Should condenser type be nullable, default to a specific value, or be omitted entirely when the system is not air-cooled DX?"
+    },
+    {
+      "description": "The exact UI location and API surface are not specified.",
+      "reason": "'Unit configuration' could refer to multiple screens, panels, or endpoints, affecting where the rule is enforced.",
+      "clarificationNeeded": "Which specific screen, panel, tab, or API endpoint should expose and persist the condenser type field?"
+    }
+  ],
+  "rationale": "The condenser type options and the exact activation condition (DX-only vs. air-cooled DX-only) are undefined, and the field's persistence, defaulting, and UI behavior for non-qualifying systems are unspecified. These ambiguities would require inventing domain and product decisions to implement."
+}
+```

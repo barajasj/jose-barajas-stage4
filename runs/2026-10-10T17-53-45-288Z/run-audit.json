@@ -1,0 +1,27 @@
+{
+  "workflowOutcome": "HUMAN_REVIEW_REQUIRED",
+  "model": "SWE-1.7",
+  "totalEstimatedCostUsd": 0.020286,
+  "steps": [
+    {
+      "step": "Agent1",
+      "agent": "Requirement Interpreter",
+      "model": "SWE-1.7",
+      "status": "PASS",
+      "inputTokens": 326,
+      "outputTokens": 781,
+      "estimatedCostUsd": 0.012693,
+      "timestamp": "2026-10-10T17:53:52.732Z"
+    },
+    {
+      "step": "Agent2",
+      "agent": "Ambiguity Risk Analyzer",
+      "model": "SWE-1.7",
+      "status": "PUNCH_OUT",
+      "inputTokens": 781,
+      "outputTokens": 350,
+      "estimatedCostUsd": 0.007593,
+      "timestamp": "2026-10-10T17:54:38.114Z"
+    }
+  ]
+}

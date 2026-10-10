@@ -1,0 +1,18 @@
+{
+  "status": "PUNCH_OUT",
+  "guardrail": "agent2-output-validation",
+  "action": "HUMAN_REVIEW_REQUIRED",
+  "reason": "Agent 2 identified a decision that requires human clarification.",
+  "blockingAmbiguities": [
+    {
+      "description": "The title says the condenser type is for 'air-cooled DX systems' while the conditional rule says it appears whenever the selected system 'uses a DX cooling coil'.",
+      "reason": "A developer cannot determine whether the field is restricted to air-cooled DX units or should be available for any DX-cooling system. These are mutually exclusive activation rules that require a product or business decision.",
+      "clarificationNeeded": "Should the condenser type field be available for any system that uses a DX cooling coil, or should it be restricted to air-cooled DX systems only?"
+    },
+    {
+      "description": "The valid condenser type options (allowed values) are not specified.",
+      "reason": "A 'condenser type selection' cannot be implemented without an authoritative list of categorical choices. Using the examples in the terminology as the option set would be an unjustified assumption.",
+      "clarificationNeeded": "What is the complete list of valid condenser type options for this field, and are any options dependent on other unit attributes?"
+    }
+  ]
+}

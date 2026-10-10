@@ -1,0 +1,18 @@
+{
+  "status": "PUNCH_OUT",
+  "guardrail": "agent2-output-validation",
+  "action": "HUMAN_REVIEW_REQUIRED",
+  "reason": "Agent 2 identified a decision that requires human clarification.",
+  "blockingAmbiguities": [
+    {
+      "description": "The condenser type values are not specified; the ticket only names the field.",
+      "reason": "A selectable field requires a defined set of options. Without them, the data model, validation, and UI behavior cannot be determined, and the options cannot be derived from the provided requirements.",
+      "clarificationNeeded": "What are the allowed condenser type options (e.g., Air-Cooled, Water-Cooled, Evaporative, or air-cooled subtypes)?"
+    },
+    {
+      "description": "The intended scope is contradictory: the ticket title narrows the field to air-cooled DX systems, while the body/general requirement applies it to any DX cooling coil system.",
+      "reason": "The visibility rule depends on which system types trigger the field. This is a business/domain decision that materially affects the conditional logic and cannot be resolved from the provided interpretation.",
+      "clarificationNeeded": "Should the condenser type field appear for all DX cooling coil systems, or only for air-cooled DX systems?"
+    }
+  ]
+}

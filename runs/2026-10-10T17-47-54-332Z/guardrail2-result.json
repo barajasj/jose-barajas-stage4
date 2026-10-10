@@ -1,0 +1,13 @@
+{
+  "status": "PUNCH_OUT",
+  "guardrail": "agent2-output-validation",
+  "action": "HUMAN_REVIEW_REQUIRED",
+  "reason": "Agent 2 identified a decision that requires human clarification.",
+  "blockingAmbiguities": [
+    {
+      "description": "The Condenser Type reset behavior when the field becomes visible again is uncertain: the interpretation states it should always reset to Standard, even if a previous value existed before it was hidden.",
+      "reason": "Resetting to Standard discards any previously selected value, whereas restoring the prior value preserves user data. These are materially different user-visible behaviors and require a product/domain decision.",
+      "clarificationNeeded": "When the Condenser Type field becomes visible again after being hidden, should it reset to Standard every time, or should it restore the previously selected value if one existed?"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "guardrail": "agent2-output-validation",
+  "action": "CONTINUE",
+  "reason": "No blocking ambiguity requires human review."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PUNCH_OUT",
+  "blockingAmbiguities": [
+    {
+      "description": "The requirement does not specify which HVAC system configuration should receive the requested behavior.",
+      "reason": "Multiple valid system configurations are possible, and selecting one would require an HVAC domain decision that is not supported by the provided requirements.",
+      "clarificationNeeded": "Which HVAC system configuration should the requested behavior apply to?"
+    }
+  ],
+  "rationale": "Implementation cannot safely proceed because selecting the applicable HVAC system configuration requires human clarification."
+}

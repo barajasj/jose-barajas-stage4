@@ -1,0 +1,18 @@
+```json
+{
+  "status": "PUNCH_OUT",
+  "blockingAmbiguities": [
+    {
+      "description": "The default value trigger for 'Standard' is ambiguous.",
+      "reason": "The requirement says the field defaults to 'Standard' when first shown, but does not define whether 'first shown' means the first time the field becomes visible for a unit (including after a hide/re-show) or only on initial creation. This choice determines whether a re-shown field is pre-filled or left empty while required, materially affecting validation and user workflow.",
+      "clarificationNeeded": "Should 'Standard' be applied every time the Condenser Type field becomes visible with no value, or only the first time it becomes visible for a given unit (e.g., on creation or first load after the feature is added)?"
+    },
+    {
+      "description": "The downstream impact of the Condenser Type selection is unspecified.",
+      "reason": "The requirement defines Standard and Low Ambient as condenser classifications, but does not state whether the choice must affect equipment sizing, condenser selection, other unit configuration fields, validation rules, or reports. Without this, the developer cannot determine whether the dropdown is the complete deliverable or whether additional domain behavior is required.",
+      "clarificationNeeded": "Does selecting 'Standard' or 'Low Ambient' have any downstream impact on equipment sizing, condenser selection, other unit configuration fields, validation rules, or reports? If so, what are the required behaviors?"
+    }
+  ],
+  "rationale": "The visibility, clear-on-hide, required-when-visible, and persistence rules are explicit. However, the default-value trigger and the product/HVAC scope of the Condenser Type options each have multiple plausible interpretations that would materially change the implementation. These require human product and domain decisions before implementation can safely proceed."
+}
+```

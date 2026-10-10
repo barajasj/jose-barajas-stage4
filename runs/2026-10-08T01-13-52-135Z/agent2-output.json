@@ -1,0 +1,11 @@
+{
+  "status": "PUNCH_OUT",
+  "blockingAmbiguities": [
+    {
+      "description": "The requirement states the Condenser Type value must be cleared when the field is hidden and must be persisted with the unit configuration when visible, but it does not define what happens to the persisted value when the field becomes hidden or when it becomes visible again.",
+      "reason": "A developer could implement 'clear' as only clearing the active UI selection while leaving the previously saved condenser type in the persisted unit configuration, or as clearing both the active selection and the persisted value. These two interpretations produce materially different persisted unit configurations and re-show behavior: a previously saved value could be restored, or the field could reset to 'Standard'. This is a product/data-retention decision that directly affects the required user-visible behavior.",
+      "clarificationNeeded": "Should the condenser type value be removed from the persisted unit configuration when the dropdown is hidden, and if it is not removed, should the previously selected value be restored or should the field reset to 'Standard' when it becomes visible again?"
+    }
+  ],
+  "rationale": "The visibility rule, default value, allowed dropdown values, and required-when-visible behavior are clear. However, the lifecycle of the persisted condenser type value when the field is hidden is ambiguous and could lead to materially different implementations. The other listed ambiguities are non-blocking: Low Ambient requires no additional logic per the explicit note, persistence location and field metadata are implementation details discoverable from the codebase, the product-line scope is not restricted by the requirement, and only the 'Air-Cooled' condenser cooling method value is needed for the rule."
+}

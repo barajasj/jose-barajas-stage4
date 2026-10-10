@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "guardrail": "punchout-enforcement",
+  "action": "CONTINUE",
+  "reason": "No human punch-out is active.",
+  "nextAgentAllowed": true
+}

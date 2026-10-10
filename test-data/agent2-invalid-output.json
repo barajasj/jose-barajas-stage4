@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "blockingAmbiguities": [
+    {
+      "description": "The applicable HVAC system configuration is unclear.",
+      "reason": "Multiple configurations are possible.",
+      "clarificationNeeded": "Which HVAC system configuration should be used?"
+    }
+  ],
+  "rationale": "The workflow can continue."
+}

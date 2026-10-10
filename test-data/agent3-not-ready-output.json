@@ -1,0 +1,12 @@
+{
+  "status": "NOT_READY",
+  "readinessChecks": {
+    "requirementsActionable": false,
+    "expectedBehaviorDefined": true,
+    "noBlockingIssues": true
+  },
+  "remainingIssues": [
+    "The interpreted requirements are not sufficiently actionable for implementation."
+  ],
+  "rationale": "The expected behavior is defined, but the requirements are not sufficiently actionable for a developer to begin implementation."
+}

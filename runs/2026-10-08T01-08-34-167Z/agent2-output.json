@@ -1,0 +1,26 @@
+{
+  "status": "PUNCH_OUT",
+  "blockingAmbiguities": [
+    {
+      "description": "The exact object or model for 'unit configuration' is not specified.",
+      "reason": "The Condenser Type value must be saved with the unit configuration, but the interpretation does not identify the specific entity, table, or API resource that represents it. Attaching the field to the wrong object would break persistence.",
+      "clarificationNeeded": "Which object, model, or API resource holds the unit configuration, and what field or property should store Condenser Type?"
+    },
+    {
+      "description": "It is not stated whether clearing a hidden Condenser Type value is destructive or only UI-level.",
+      "reason": "If the value is only hidden from the UI, it could be restored when the field reappears. If it is cleared from storage, the default-to-Standard rule will apply again. These produce materially different data and user experiences.",
+      "clarificationNeeded": "Should the persisted Condenser Type value be reset to null/empty when the field is hidden, or should it be retained in the underlying model for restoration?"
+    },
+    {
+      "description": "The persistence format or schema for Condenser Type is not specified.",
+      "reason": "The dropdown labels are 'Standard' and 'Low Ambient', but the saved value could be the display string, a coded key, an enum, or a numeric identifier. This choice affects the data model, API contract, and future label changes.",
+      "clarificationNeeded": "What exact value should be persisted for each option (for example, 'Standard'/'LowAmbient', 'STD'/'LOW', or an enum/numeric code)?"
+    },
+    {
+      "description": "No behavior is defined for warning the user before clearing a previously selected Condenser Type.",
+      "reason": "When the visibility rule becomes false, the selected value must be cleared. Silently discarding a user-selected value can cause unintended data loss; whether to warn is a product/UX decision.",
+      "clarificationNeeded": "Should the system display a warning or require confirmation before clearing the Condenser Type value when the field becomes hidden due to a change in cooling coil type or condenser cooling method?"
+    }
+  ],
+  "rationale": "The requirement resolves visibility, option list, defaulting, and mandatory selection, but unresolved product and engineering decisions around the unit configuration object, clearing semantics, persisted value format, and data-loss warnings would produce materially different implementations."
+}

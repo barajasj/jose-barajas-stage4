@@ -1,0 +1,16 @@
+﻿{
+  "status": "PUNCH_OUT",
+  "blockingAmbiguities": [
+    {
+      "description": "The activation scope for the condenser type selector is contradictory: the requirement states it is relevant only for air-cooled DX systems, but also says it must be visible/enabled whenever the selected system uses a DX cooling coil.",
+      "reason": "A developer cannot determine whether to show the field for every DX system or only for systems specifically identified as air-cooled DX; these are materially different visibility rules and may require different identification logic.",
+      "clarificationNeeded": "Should the condenser type field be shown for all DX systems, or only for air-cooled DX systems, and if the latter, how is 'air-cooled DX' distinguished from other DX configurations?"
+    },
+    {
+      "description": "The complete list of selectable condenser type values is not specified.",
+      "reason": "A selector cannot be implemented without a defined set of options; without an authoritative list, a developer would have to invent domain values, risking an invalid or incomplete implementation.",
+      "clarificationNeeded": "What is the complete, authoritative list of condenser type options (e.g., Air-Cooled, Water-Cooled, Evaporative-Cooled, Remote, Split, etc.) that should appear in the selector?"
+    }
+  ],
+  "rationale": "The interpreted requirements contain a direct scope contradiction and an undefined domain enumeration. Without resolving these, a developer cannot know when to display the field or what values to present, leading to materially different implementations. Other noted ambiguities (non-DX field behavior, default value, validation/saving) are secondary but also cannot be fully resolved until the scope and allowed values are decided."
+}

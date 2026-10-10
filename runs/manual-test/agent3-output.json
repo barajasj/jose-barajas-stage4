@@ -1,0 +1,16 @@
+﻿{
+  "status": "NOT_READY",
+  "readinessChecks": {
+    "requirementsActionable": false,
+    "expectedBehaviorDefined": false,
+    "noBlockingIssues": false
+  },
+  "remainingIssues": [
+    "Condenser type selectable values are not defined; the requirement says 'select a condenser type' but does not list allowed options.",
+    "Scope conflict: the selector is described as relevant for 'air-cooled DX systems' but the visibility rule is 'when the selected system uses a DX cooling coil'; it is unclear whether it applies to all DX systems or only air-cooled DX systems.",
+    "Field behavior for non-DX systems is not specified (hidden, disabled, or reset/cleared).",
+    "No default value is specified for the condenser type when a DX coil is selected, nor whether it persists across coil-type changes.",
+    "Validation and saving behavior is unspecified, including whether the value must be cleared when switching from DX to non-DX and whether invalid combinations are blocked at save."
+  ],
+  "rationale": "The interpreted requirement lacks the condenser-type domain values, has an unresolved scope conflict between air-cooled DX and all DX systems, and omits default value, non-DX UX behavior, and save/validation behavior. These gaps are implementation-blocking."
+}

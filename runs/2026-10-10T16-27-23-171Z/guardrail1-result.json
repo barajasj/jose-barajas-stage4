@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "guardrail": "agent1-output-validation",
+  "reason": "All required Agent 1 sections are present.",
+  "missingSections": []
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PUNCH_OUT",
+  "blockingAmbiguities": [
+    {
+      "description": "The behavior for Condenser Type values already persisted in saved unit configurations when the unit is first loaded and does not meet the visibility conditions is not explicitly specified.",
+      "reason": "The requirements define clearing the value when the field transitions from visible to hidden, but they do not state whether that same cleanup should run on the initial load of an existing record. Whether to clear immediately on load or to wait for an actual visibility-change event materially changes how persisted data is treated and whether hidden, stale Condenser Type values can remain in the configuration.",
+      "clarificationNeeded": "When a saved unit configuration is loaded and does not meet the Condenser Type visibility conditions, should the persisted Condenser Type value be cleared immediately, or should it remain until the visibility conditions actually change?"
+    }
+  ],
+  "rationale": "The requirement interpretation clearly defines field visibility, allowed values, default, validation, and dynamic hide/re-show behavior, but it does not resolve how existing persisted Condenser Type values should be handled on initial load when the field would be hidden. This missing decision affects data integrity and required behavior, so human clarification is needed before implementation."
+}

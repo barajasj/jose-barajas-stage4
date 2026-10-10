@@ -1,0 +1,18 @@
+{
+  "status": "PUNCH_OUT",
+  "guardrail": "agent2-output-validation",
+  "action": "HUMAN_REVIEW_REQUIRED",
+  "reason": "Agent 2 identified a decision that requires human clarification.",
+  "blockingAmbiguities": [
+    {
+      "description": "The requirement uses two different conditions: the condenser type field must only be selectable for 'air-cooled DX systems', but it must be hidden/disabled if the selected system 'does not use a DX cooling coil'. These are not equivalent because a water-cooled DX system uses a DX cooling coil but is not air-cooled.",
+      "reason": "A human domain/product decision is required to determine whether the condenser type field applies to all DX systems or strictly air-cooled DX systems. Without this, the behavior for water-cooled DX systems cannot be decided and may be implemented incorrectly.",
+      "clarificationNeeded": "Should the condenser type field be available for all DX systems, or only for air-cooled DX systems? For a water-cooled DX system, should the condenser type field be hidden, disabled, read-only, or selectable?"
+    },
+    {
+      "description": "The specific condenser type options/values the user should select are not defined.",
+      "reason": "The field's selectable values are a required product/domain decision. The technical concepts list general condenser types (air-cooled, water-cooled, evaporative-cooled), but the requirement restricts the field to air-cooled DX, so the intended value set cannot be inferred.",
+      "clarificationNeeded": "What are the exact condenser type options or values the user should be able to select? Are they general condenser classifications, or subtypes specific to air-cooled DX condensers?"
+    }
+  ]
+}

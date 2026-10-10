@@ -1,0 +1,5 @@
+{
+  "outcome": "HUMAN_REVIEW_REQUIRED",
+  "reason": "Workflow stopped because human clarification is required.",
+  "agent3Executed": false
+}
