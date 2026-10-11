@@ -24,6 +24,7 @@ const { spawnSync } = require("child_process");
 const {
   existsSync,
   mkdirSync,
+  copyFileSync,
   readFileSync,
   writeFileSync,
 } = require("fs");
@@ -175,6 +176,15 @@ const auditSteps = [];
 const workflowModel = config.runtime.model;
 
 console.log(`Run directory: ${runDirectory}`);
+
+//
+// Input Ticket Traceability
+//
+
+copyFileSync(
+  ticketFile,
+  path.join(runDirectory, "input-ticket.md")
+);
 
 //
 // Agent 1

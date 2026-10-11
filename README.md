@@ -8,6 +8,93 @@ The workflow extends the previously certified Stage 3 HVAC Requirement Interpret
 
 ---
 
+# How to Run
+
+Prerequisites:
+
+- Node.js
+- Devin CLI available on PATH (agents are executed via the Devin CLI)
+
+Run the workflow from the repository root:
+
+```text
+node workflow/workflow.js <ticket-file>
+```
+
+Each execution creates a timestamped run directory:
+
+```text
+runs/<timestamp>/
+```
+
+The input ticket is copied into the run directory as `input-ticket.md` for traceability.
+
+---
+
+## Run the Escalation Sample
+
+```text
+node workflow/workflow.js test-data/sample-ticket.md
+```
+
+Expected outcome:
+
+```text
+HUMAN_REVIEW_REQUIRED
+```
+
+Expected exit code:
+
+```text
+2
+```
+
+Expected behavior:
+
+- Agent 1 executes and passes Guardrail 1.
+- Agent 2 identifies blocking ambiguities and returns PUNCH_OUT.
+- Punch-Out Enforcement blocks continuation.
+- Agent 3 is not executed.
+- `punchout-result.json` and `workflow-result.json` are written to the run directory.
+
+---
+
+## Run the Ready-for-Implementation Sample
+
+```text
+node workflow/workflow.js test-data/sample-ticket-ready.md
+```
+
+Expected outcome:
+
+```text
+WORKFLOW_SUCCESS
+```
+
+Expected exit code:
+
+```text
+0
+```
+
+Expected behavior:
+
+- Agent 1, Agent 2, and Agent 3 all execute.
+- All guardrails pass.
+- `agent3-output.json`, `guardrail3-result.json`, and `workflow-result.json` are written to the run directory.
+
+---
+
+## Exit Codes
+
+| Exit Code | Outcome | Meaning |
+|-----------|---------|---------|
+| 0 | WORKFLOW_SUCCESS | All agents and guardrails completed successfully |
+| 2 | HUMAN_REVIEW_REQUIRED | Valid PUNCH_OUT; continuation blocked for human clarification |
+| 1 | WORKFLOW_FAILURE | Validation, execution, or workflow error |
+
+---
+
 # Certification Evidence
 
 The workflow successfully demonstrates:
@@ -317,6 +404,7 @@ runs/<timestamp>/
 
 Artifacts include:
 
+- Input ticket (`input-ticket.md`)
 - Agent outputs
 - Guardrail results
 - Punch-out decisions
