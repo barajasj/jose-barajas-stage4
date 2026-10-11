@@ -75,6 +75,8 @@ Exit Code:
 
 # Observed Executions
 
+Observed Executions below reflect only the evaluation cohort.
+
 ## Execution 1
 
 Run Directory:

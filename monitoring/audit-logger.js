@@ -17,7 +17,7 @@ function estimateTokens(text) {
 //   return Number((inputCost + outputCost).toFixed(6));
 // }
 function estimateCost(inputTokens, outputTokens) {
-  // SWE-1.7 Max pricing
+  // SWE-1.7 pricing
   const inputCostPerMillion = 0.50;
   const outputCostPerMillion = 2.50;
 

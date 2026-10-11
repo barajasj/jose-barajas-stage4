@@ -30,7 +30,7 @@ Token counts are estimated by `audit-logger.js` using:
 Math.ceil(text.length / 4)
 ```
 
-Cost is estimated using SWE-1.7 Max pricing:
+Cost is estimated using SWE-1.7 pricing:
 
 - Input: $0.50 per 1,000,000 tokens
 - Output: $2.50 per 1,000,000 tokens
@@ -119,7 +119,7 @@ The current implementation captures execution history and provides automated tok
 
 ## Cost Estimation Method
 
-Token costs are estimated using SWE-1.7 Max pricing.
+Token costs are estimated using SWE-1.7 pricing.
 
 Pricing assumptions:
 

@@ -120,7 +120,7 @@ Demonstrated Outcomes:
 |----------|----------|
 | WORKFLOW_SUCCESS | Yes |
 | HUMAN_REVIEW_REQUIRED | Yes |
-| WORKFLOW_FAILURE | Supported through guardrail validation paths |
+| WORKFLOW_FAILURE | Demonstrated through real workflow execution. See workflow-failure-evidence.md |
 
 ---
 

@@ -18,7 +18,7 @@ Agent 1 - Requirement Interpreter
     v
 Guardrail 1 - Agent 1 Output Validation
     |
-    +-- INVALID --> WORKFLOW FAILURE
+    +-- INVALID --> WORKFLOW_FAILURE
     |
     v
 Agent 2 - Ambiguity Risk Analyzer
@@ -26,9 +26,9 @@ Agent 2 - Ambiguity Risk Analyzer
     v
 Guardrail 2 - Agent 2 Output and Escalation Validation
     |
-    +-- INVALID --> WORKFLOW FAILURE
+    +-- INVALID --> WORKFLOW_FAILURE
     |
-    +-- PUNCH_OUT --> HUMAN REVIEW
+    +-- PUNCH_OUT --> HUMAN_REVIEW_REQUIRED
     |
     v
 Agent 3 - Implementation Readiness Reviewer
@@ -36,15 +36,15 @@ Agent 3 - Implementation Readiness Reviewer
     v
 Guardrail 3 - Agent 3 Output Validation
     |
-    +-- INVALID --> WORKFLOW FAILURE
+    +-- INVALID --> WORKFLOW_FAILURE
     |
-    +-- NOT_READY --> WORKFLOW FAILURE
+    +-- NOT_READY --> WORKFLOW_FAILURE
     |
     v
 READY
     |
     v
-WORKFLOW SUCCESS
+WORKFLOW_SUCCESS
 
 ---
 
@@ -234,17 +234,17 @@ Human escalation is reserved for decisions explicitly identified as requiring hu
 
 The workflow has three possible final outcomes.
 
-### SUCCESS
+### WORKFLOW_SUCCESS
 
 Agent 3 returns READY and all guardrails pass.
 
-### PUNCH_OUT
+### HUMAN_REVIEW_REQUIRED
 
-Agent 2 identifies a blocking decision requiring human judgment.
+Agent 2 returns PUNCH_OUT — a blocking decision requiring human judgment.
 
 The workflow intentionally stops and requests human review.
 
-### WORKFLOW FAILURE
+### WORKFLOW_FAILURE
 
 The workflow cannot complete correctly because of invalid agent output, failed validation, or an incomplete implementation-readiness result.
 

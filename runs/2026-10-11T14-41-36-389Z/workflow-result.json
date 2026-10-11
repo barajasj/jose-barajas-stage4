@@ -1,0 +1,4 @@
+{
+  "outcome": "WORKFLOW_FAILURE",
+  "reason": "Agent 1 output validation failed."
+}

@@ -14,6 +14,8 @@ Stage 4 evaluates the behavior of the complete workflow.
 
 ## Evaluation Cohort
 
+Note: See `end-to-end-success-rate-report.md` for authoritative metrics.
+
 Many workflow executions were performed during development and prompt refinement.
 
 This document intentionally focuses on the final evaluation cohort used to validate the production workflow configuration.
@@ -126,6 +128,8 @@ Workflow completed successfully through all stages.
 ---
 
 # Current Metrics
+
+Note: See `end-to-end-success-rate-report.md` for authoritative metrics.
 
 Total Executions:
 

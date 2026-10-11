@@ -31,10 +31,10 @@ Raw HVAC Ticket
 Agent 1 - Requirement Interpreter
 
 Purpose:
-Convert the raw ticket into structured requirements, assumptions, ambiguities, technical concepts, and clarification questions.
+Convert the raw ticket into a structured requirement analysis.
 
 Output:
-Structured requirement analysis with defined sections: requirements, assumptions, ambiguities, technical concepts, clarification questions.
+Structured requirement analysis with the required sections: Requirement Summary, HVAC Terminology, Developer Interpretation, Ambiguities / Missing Information.
 
     ↓
 

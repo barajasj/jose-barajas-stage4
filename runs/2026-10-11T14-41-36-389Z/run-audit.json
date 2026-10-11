@@ -1,0 +1,17 @@
+{
+  "workflowOutcome": "WORKFLOW_FAILURE",
+  "model": "SWE-1.7",
+  "totalEstimatedCostUsd": 0.001349,
+  "steps": [
+    {
+      "step": "Agent1",
+      "agent": "Requirement Interpreter",
+      "model": "SWE-1.7",
+      "status": "FAIL",
+      "inputTokens": 163,
+      "outputTokens": 507,
+      "estimatedCostUsd": 0.001349,
+      "timestamp": "2026-10-11T14:41:45.644Z"
+    }
+  ]
+}

@@ -4,6 +4,8 @@
 
 This document provides evidence that the HVAC Ticket Analysis Workflow successfully executes multiple AI agents, deterministic guardrails, workflow branching, human escalation controls, and final workflow outcomes.
 
+Canonical cost methodology and tracking: `audit/token-and-cost-tracking.md`.
+
 ---
 
 # Workflow
